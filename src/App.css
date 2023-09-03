@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+body {
+  overflow: hidden;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.playlist-generator {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 90vh;
+  background-color: #1db954; /* Spotify Green */
+  color: #000; /* Black */
 }
 
-.App-link {
-  color: #61dafb;
+.textbox-container {
+  width: 80%;
+  max-width: 600px;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.textbox {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: none;
+  outline: none;
+}
+
+.generate-button {
+  background-color: #1db954; /* Spotify Green */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.generate-button:hover {
+  background-color: #169c4d; /* Slightly darker green on hover */
+}
+.app-header {
+  background-color: #000; /* Black background for the header */
+  color: #1db954; /* Spotify Green text color */
+  text-align: center;
+  padding: 20px 0;
+}
+
+.app-title {
+  font-size: 24px;
+  margin: 0;
 }
