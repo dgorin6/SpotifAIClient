@@ -1,16 +1,31 @@
-body {
-  overflow: hidden;
-}
 .playlist-generator {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 85vh;
   background-color: #1db954; /* Spotify Green */
   color: #000; /* Black */
 }
-
+.login-screen {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-button {
+  background-color: #1db954; /* Spotify Green */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.login-button:hover {
+  background-color: #169c4d;
+}
 .textbox-container {
   width: 80%;
   max-width: 600px;
@@ -39,16 +54,156 @@ body {
 }
 
 .generate-button:hover {
-  background-color: #169c4d; /* Slightly darker green on hover */
+  background-color: #169c4d;
 }
 .app-header {
-  background-color: #000; /* Black background for the header */
-  color: #1db954; /* Spotify Green text color */
-  text-align: center;
-  padding: 20px 0;
+  background-color: #131313;
+  color: #13f762;
+  display: flex;
+  align-items: center; /* Vertically align items */
+  justify-content: center; /* Distribute items horizontally */
+  height: 15vh;
 }
 
-.app-title {
-  font-size: 24px;
-  margin: 0;
+.app-logo {
+  width: 350px;
+  height: auto; 
 }
+.app-logo:hover {
+  cursor: pointer;
+}
+.loading-display {
+  background-color: #131313;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+}
+.playlist-display {
+  background-color: #131313;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  min-height: 85vh;
+}
+
+.playlist-title {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.track-list {
+  list-style: none;
+  padding: 0;
+}
+
+.track-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 60vw;
+}
+
+.create-playlist-button {
+  background-color: #1db954;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-playlist-button:hover {
+  background-color: #169c4d;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.9); /* Dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Ensure it appears on top of other content */
+}
+
+.overlay-content {
+  background-color: #1db954; /* Green */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  max-width: 80%;
+  color: #fff; /* White text */
+}
+
+.overlay-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #fff; /* White border */
+}
+
+.close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+  color: #fff; /* White */
+}
+
+.close-button:hover {
+  color: #f00; /* Red on hover */
+}
+
+input[type="text"] {
+  background-color: #131313; /* Dark background */
+  color: #fff; /* White text */
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 90%;
+}
+
+input[type="text"]::placeholder {
+  color: #aaa; /* Light gray placeholder text */
+}
+
+button {
+  background-color: #1db954; /* Green */
+  color: #fff; /* White text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0d920d; /* Slightly darker green on hover */
+}
+
+.success-link {
+  color: white; 
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.success-link:hover {
+  font-weight: bold; 
+}
+
