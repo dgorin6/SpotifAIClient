@@ -207,3 +207,14 @@ button:hover {
   font-weight: bold; 
 }
 
+.disclaimer {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+}
+.disclaimer a {
+  text-decoration: underline;
+  color: #007bff;
+}

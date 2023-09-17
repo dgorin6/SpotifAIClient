@@ -5,6 +5,7 @@ import Prompt from './Components/Prompt';
 import PlaylistDisplay from './Components/PlaylistDisplay';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import UserContext from './Components/UserContext';
+import Disclaimer from './Components/Disclaimer';
 function App() {
   const [authToken, setAuthToken] = useState<string | null>(null)
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route  path="/" element={<Prompt />} />
           <Route path="/playlist" element={<PlaylistDisplay />} />
         </Routes>
+        <Disclaimer />
         </UserContext.Provider>
       </div>
     </Router>
