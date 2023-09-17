@@ -79,6 +79,7 @@ const PlaylistDisplay = () => {
         const link = data.link;
         setLink(link)
         setCreateSuccessActive(true)
+        console.log(link);
       })
       .catch((error) => {
         console.error('Error generating playlist:', error);
