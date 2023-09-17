@@ -7,10 +7,8 @@ const Prompt = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const {authToken, setAuthToken} = useContext(UserContext);
   const clientId = process.env.REACT_APP_CLIENT_ID;
-  const redirectUri = "https://spotifai.net";
-  if (process.env.NODE_ENV == "development") {
-    const redirectUri = "http://localhost:3001";
-  }
+  const redirectUri = process.env.NODE_ENV !== "development" ? "https://spotifai.net" : "http://localhost:3001";
+  console.log(process.env.NODE_ENV);
   const scopes = 'playlist-modify-public playlist-modify-private';
   const spotifyAuthUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${encodeURIComponent(scopes)}&response_type=token`;
   useEffect(() => {

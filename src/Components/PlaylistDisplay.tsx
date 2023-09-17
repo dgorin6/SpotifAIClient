@@ -30,7 +30,7 @@ const PlaylistDisplay = () => {
       }
     }, []);
   const getPlaylist = async () => {
-    fetch('http://3.81.225.124/playlist', {
+    fetch('https://backend.spotifai.net/playlist', {
         method: 'POST',
         body: JSON.stringify({ prompt }),
         headers: {
@@ -67,7 +67,7 @@ const PlaylistDisplay = () => {
   }
   const createPlaylist = async () => {
     const title = playlistTitle
-    fetch('http://3.81.225.124/createPlaylist', {
+    fetch('https://backend.spotifai.net/createPlaylist', {
       method: 'POST',
       body: JSON.stringify({ uris, title, authToken, userId }),
       headers: {
